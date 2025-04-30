@@ -1,113 +1,109 @@
-### Demo
-URL: https://searchgithubuserinfo.netlify.app
+# GitHub User Search Application
 
-<p align="center">
-<a href="https://user-images.githubusercontent.com/42184833/119221268-259d4e80-bb0c-11eb-85a9-8670dcd09d8f.png" target="_blank">
-<img src="https://user-images.githubusercontent.com/42184833/119221268-259d4e80-bb0c-11eb-85a9-8670dcd09d8f.png" width="90%" /> 
-<a/>
-</p
+A modern React-based web application that allows users to search and explore GitHub profiles, repositories, and manage their favorite repositories. Built with Firebase authentication and GitHub API integration.
 
-## **Features**  
+## 🚀 Features
 
--   **Authentication**
+### 🔐 Authentication
 
-	1.  Sign up
-	2.  Login
-	3.  Forgot Password using email  
-    
-	4.  Logout
+- Secure user authentication with Firebase
+- Email-based signup and login
+- Password recovery functionality
+- Session management and logout
 
--   **user info**
+### 👤 GitHub Profile Search
 
-	1.  Search GitHub user using GitHub API
-	2.  Show user profile
+- Real-time GitHub user search using GitHub API
+- Detailed profile information display:
+  - User avatar
+  - Full name
+  - GitHub username
+  - Bio
+  - Website/blog URL
+  - Location
 
-		- Avatar
+### 📚 Repository Management
 
-		- Name  
+- Comprehensive repository information:
+  - Repository name with direct GitHub links
+  - Detailed descriptions
+  - Programming language indicators
+  - Star and watch counts
+  - Favorite repository management
+- User statistics:
+  - Total repositories count
+  - Gists count
+  - Followers count
 
-		- Username / Github Id  
+## 🛠️ Technical Stack
 
-		- Bio  
+- **Frontend Framework**: React 16.13.1
+- **Routing**: React Router DOM 5.2.0
+- **UI Components**: React Bootstrap 1.6.0
+- **Styling**: Bootstrap 4.6.0
+- **HTTP Client**: Axios 0.21.1
+- **Notifications**: React Toastify 7.0.4
+- **Backend Services**: Firebase
+  - Authentication
+  - Cloud Firestore
 
-		- Blog URL / Website  
+## 🚀 Getting Started
 
-		- Location
+### Prerequisites
 
-  
-	3. User Repo
+- Node.js (LTS version recommended)
+- npm or yarn
+- Firebase account
 
-		- Total Repo, Gists and Followers Count
+### Installation
 
-		- Name (on click open github repo page)
+1. Clone the repository:
 
-		- Description  
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
 
-		- language  
+2. Install dependencies:
 
-		- Star count  
+```bash
+npm install
+```
 
-		- Watch count
+3. Set up Firebase:
+   - Create a new Firebase project
+   - Enable Email Authentication
+   - Set up Cloud Firestore
+   - Create a `.env.local` file with the following Firebase configuration:
 
-		- Heart icon for add to favorite
+```
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_DATABASE_URL=your_database_url
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
 
-	4. add or remove repo in favorite
+### Running the Application
 
-  
+- Development mode:
 
-## **Technologies**
-1.  React 16.13.1
-2.  React Dom 16.13.1
-3.  React Router Dom 5.2.0
-4.  React Toasttify 7.0.4
-5.  Axios 0.21.1
-6.  React Bootstrap 1.6.0
-7.  Bootstrap 4.6.0
+```bash
+npm start
+```
 
-## **How to Use**
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-    git clone https://github.com/DIp15739/github-search.git
-    cd github-search
-    npm install
+- Production build:
 
- - ### **Firebase**
-	 - Create
-		 - Create Firebase Project
-		 - Start Authentication with Email
-		 - Start Cloud Firestore
-		 - Copy config from Project settings
-	
-	- Setup in project
-		- Create `.evn.local` file and add all data</br>
-***REACT_APP_FIREBASE_API_KEY*** = apiKey value </br>
-***REACT_APP_FIREBASE_AUTH_DOMAIN*** = authDomain value </br>
-***REACT_APP_FIREBASE_DATABASE_URL*** = databaseURL value</br>
-***REACT_APP_FIREBASE_PROJECT_ID*** = projectId value </br>
-***REACT_APP_FIREBASE_STORAGE_BUCKET*** = storageBucket value </br>
-***REACT_APP_FIREBASE_MESSAGING_SENDER_ID*** = measurementId value </br>
-***REACT_APP_FIREBASE_APP_ID*** = appId value </br>
- 
- - ### **In the project directory**
+```bash
+npm run build
+```
 
-	### `npm start`
+- Testing:
 
-	Runs the app in the development mode.  
-Open  [http://localhost:3000](http://localhost:3000/)  to view it in the browser.
-
-	The page will reload if you make edits.  
-You will also see any lint errors in the console.
-
-	### `npm test`
-
-	Launches the test runner in the interactive watch mode.  
-See the section about  [running tests](https://facebook.github.io/create-react-app/docs/running-tests)  for more information.
-
-	### `npm run build`
-
-	Builds the app for production to the  `build`  folder.  
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-	The build is minified and the filenames include the hashes.  
-Your app is ready to be deployed!
-
-	See the section about  [deployment](https://facebook.github.io/create-react-app/docs/deployment)  for more information.
+```bash
+npm test
+```
